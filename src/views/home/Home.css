@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #1f2347;
+  --colors-navbar-bg: rgba(34, 38, 74, 0.9);
+  --colors-shadow: rgba(255, 204, 104, 0.25);
+  --colors-shadow-dark: rgba(0, 0, 0, 0.25);
+  --colors-lighter: #fff;
+  --colors-light100: #dcdff7;
+  --colors-light300: #adb2dc;
+  --colors-light400: #6870af;
+  --colors-light500: #343c7a;
+  --colors-light700: #2e3360;
+  --colors-light800: #282e5e;
+  --colors-light900: #22264a;
+  --colors-light950: #1f2347;
+  --colors-darker: #000;
+  --colors-accent: #ffcc68;
+}
