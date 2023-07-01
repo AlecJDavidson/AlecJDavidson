@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 20rem;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+}
+
+.navbar-items {
+  display: none;
+  font-size: 1.25rem;
+}
+
+
+.nav-item{
+  margin-right: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-items {
+    display: flex;
+  }
+}
