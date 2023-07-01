@@ -1,11 +1,13 @@
 import 'react'
 import './Home.css'
-import Navbar from '../../components/ui-components/navbar/Navbar'
 const Home = () => {
   return (
-    <>
-      <Navbar/>
-    </>
+    <div className='home-content'>
+      <p className='first-line'>Hi, my name is</p>
+      <p className='second-line'>Alec Davidson.</p>
+      <p className='third-line'>The tower of power,</p>
+      <p className='third-line'>too sweet to be sour!</p>
+    </div>
   )
 }
 

@@ -3,10 +3,12 @@ import './App.css'
 
 import { Routes, Route } from 'react-router-dom'
 import Home from './views/home/Home'
+import Navbar from './components/ui-components/navbar/Navbar'
 
 const App = () => {
   return (
     <>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>

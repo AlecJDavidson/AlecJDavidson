@@ -1,24 +1,43 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.home-content {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  margin-top: -30%;
 }
 
-body {
-  background-color: #1f2347;
-  --colors-navbar-bg: rgba(34, 38, 74, 0.9);
-  --colors-shadow: rgba(255, 204, 104, 0.25);
-  --colors-shadow-dark: rgba(0, 0, 0, 0.25);
-  --colors-lighter: #fff;
-  --colors-light100: #dcdff7;
-  --colors-light300: #adb2dc;
-  --colors-light400: #6870af;
-  --colors-light500: #343c7a;
-  --colors-light700: #2e3360;
-  --colors-light800: #282e5e;
-  --colors-light900: #22264a;
-  --colors-light950: #1f2347;
-  --colors-darker: #000;
-  --colors-accent: #ffcc68;
+.first-line {
+  font-size: 1.25rem;
+  text-align: left;
+  color: #ffcc68;
+  font-family: 'Courier New', monospace;
+  margin-bottom: -2.5%;
+}
+
+.second-line {
+  font-size: 4rem;
+
+  font-weight: bolder;
+  text-align: left;
+
+  color: white;
+  font-family: Helvetica;
+}
+
+.third-line {
+  font-size: 4rem;
+
+  font-weight: bold;
+  text-align: left;
+
+  color: white;
+  font-family: Helvetica;
+}
+
+.third-line {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+
+  color: #adb2dc;
+  font-family: Helvetica;
 }
