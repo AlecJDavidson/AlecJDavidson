@@ -14,11 +14,18 @@ import {
   Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from '@chakra-ui/icons'
+import { Link as RouterLink } from 'react-router-dom'
 
-const Links = ['About', 'Blog', 'Projects']
+const Links = [
+  { text: 'About', route: '/about' },
+  { text: 'Blog', route: '/blog' },
+  { text: 'Projects', route: '/projects' },
+]
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children, to }: { children: ReactNode; to: string }) => (
   <Link
+    as={RouterLink}
+    to={to}
     fontFamily={'Helvetica'}
     fontSize={'1.25rem'}
     fontWeight={'500'}
@@ -29,13 +36,12 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}
   >
     {children}
   </Link>
 )
 
-export default function Nav() {
+const Nav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
 
@@ -49,8 +55,11 @@ export default function Nav() {
               fontSize={'1.25rem'}
               fontWeight={'500'}
             >
-              Alec Davidson
+              <Link as={RouterLink} to='/' _hover={{ textDecoration: 'none' }}>
+                Alec Davidson
+              </Link>
             </Box>
+
           </HStack>
 
           <Flex alignItems={'center'}>
@@ -71,7 +80,9 @@ export default function Nav() {
               display={{ base: 'none', md: 'flex' }}
             >
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.text} to={link.route}>
+                  {link.text}
+                </NavLink>
               ))}
             </HStack>
 
@@ -100,7 +111,9 @@ export default function Nav() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.text} to={link.route}>
+                  {link.text}
+                </NavLink>
               ))}
             </Stack>
           </Box>
@@ -109,3 +122,5 @@ export default function Nav() {
     </>
   )
 }
+
+export default Nav
