@@ -1,5 +1,10 @@
 import React from 'react'
-import { Box, Heading, Text, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 
 interface HeroStatementProps {
   hello: string
@@ -14,11 +19,10 @@ const HeroStatement: React.FC<HeroStatementProps> = ({
   heroLine,
   subtitle,
 }) => {
+
   return (
     <Box
       p={8}
-      bg='gray.800'
-      color='white'
       display='flex'
       justifyContent='center'
       alignItems='center'

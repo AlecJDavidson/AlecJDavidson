@@ -87,6 +87,8 @@ export default function Nav() {
 
           <IconButton
             size={'md'}
+            height={'2rem'}
+            width={'2rem'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
