@@ -19,6 +19,9 @@ const Links = ['About', 'Blog', 'Projects']
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
+    fontFamily={'Helvetica'}
+    fontSize={'1.25rem'}
+    fontWeight={'500'}
     px={2}
     py={1}
     rounded={'md'}
@@ -38,10 +41,16 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.700')} px={4}>
+      <Box px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Alec Davidson</Box>
+            <Box
+              fontFamily={'Helvetica'}
+              fontSize={'1.25rem'}
+              fontWeight={'500'}
+            >
+              Alec Davidson
+            </Box>
           </HStack>
 
           <Flex alignItems={'center'}>
@@ -66,7 +75,12 @@ export default function Nav() {
               ))}
             </HStack>
 
-            <Button onClick={toggleColorMode}>
+            <Button
+              height={'2rem'}
+              width={'2rem'}
+              onClick={toggleColorMode}
+              alignItems={'center'}
+            >
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
           </HStack>
@@ -90,8 +104,6 @@ export default function Nav() {
           </Box>
         ) : null}
       </Box>
-
-      <Box p={4}>Main Content Here</Box>
     </>
   )
 }
