@@ -59,7 +59,6 @@ const Nav = () => {
                 Alec Davidson
               </Link>
             </Box>
-
           </HStack>
 
           <Flex alignItems={'center'}>
