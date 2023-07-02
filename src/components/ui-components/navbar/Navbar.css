@@ -17,6 +17,7 @@
 
 .navbar-items {
   display: none;
+  list-style: none;
   font-size: 1.25rem;
 }
 
