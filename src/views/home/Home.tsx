@@ -1,8 +1,7 @@
 import 'react'
-import './Home.css'
+import HeroStatement from '../../components/ui-components/hero/Hero'
 const Home = () => {
-  return (
-<>content here</> )
+  return <HeroStatement hello='Hi, my name is' title='Alec Davidson' subtitle='test' buttonText='test' />
 }
 
 export default Home
