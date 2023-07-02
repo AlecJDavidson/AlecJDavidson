@@ -5,7 +5,7 @@ const Home = () => {
     <HeroStatement
       hello='Hi, my name is'
       title='Alec Davidson.'
-      title2='The tower of power, too sweet to be sour!'
+      heroLine='The tower of power, too sweet to be sour!'
       subtitle='test'
     />
   )
