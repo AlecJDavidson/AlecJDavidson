@@ -6,7 +6,8 @@ const Home = () => {
       hello='Hi, my name is'
       title='Alec Davidson.'
       heroLine='The tower of power, too sweet to be sour!'
-      subtitle='test'
+      subtitle="I'm a Software Engineer based in Indianapolis. I specialize in creating
+        websites and app solutions in the cloud to transform your business."
     />
   )
 }

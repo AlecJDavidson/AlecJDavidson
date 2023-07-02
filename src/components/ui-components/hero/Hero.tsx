@@ -28,37 +28,44 @@ const HeroStatement: React.FC<HeroStatementProps> = ({
       marginTop='5%'
     >
       <VStack spacing={4} alignItems='flex-start' lineHeight='1.4rem'>
-        <Text fontSize={['sm', 'md', 'lg']} maxWidth='30rem' marginBottom='2%' fontFamily='Source Code Pro'>
+        <Text
+          fontSize={['sm', 'md', 'lg']}
+          maxWidth='30rem'
+          marginBottom='2%'
+          fontFamily='Source Code Pro'
+        >
           {hello}
         </Text>
-        <Heading
-          as='h1'
-          size='2xl'
-          fontSize={['3xl', '4xl', '5xl', '6xl', '7xl']}
-          fontWeight='bolder'
-          textAlign='left'
-          maxWidth='40rem'
-          marginBottom='2%'
-        >
-          {title}
-        </Heading>
-        <Heading
-          as='h1'
-          size='2xl'
-          fontSize={['3xl', '4xl', '5xl', '6xl', '7xl']}
-          fontWeight='bolder'
-          textAlign='left'
-          maxWidth='50rem'
-        >
-          {heroLine}
-        </Heading>
+        <Box maxWidth='40rem' marginBottom='1%'>
+          <Heading
+            as='h1'
+            size='2xl'
+            fontSize={['3xl', '4xl', '5xl', '6xl', '7xl']}
+            fontWeight='bolder'
+            textAlign='left'
+          >
+            {title}
+          </Heading>
+        </Box>
+        <Box maxWidth='50rem'>
+          <Heading
+            as='h1'
+            size='2xl'
+            fontSize={['3xl', '4xl', '5xl', '6xl', '7xl']}
+            fontWeight='bolder'
+            textAlign='left'
+          >
+            {heroLine}
+          </Heading>
+        </Box>
 
         <Text
           fontSize={['md', 'xl', '2xl']}
+          fontFamily='arial'
+          lineHeight='2rem'
           mb={6}
           textAlign='left'
           maxWidth='35rem'
-          margin='1.5rem 0px'
         >
           {subtitle}
         </Text>
