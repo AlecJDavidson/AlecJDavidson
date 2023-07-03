@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Box bg="gray.200" py={4} px={8}>
       <Flex justify="space-between" align="center">
-        <Text>&copy; Your Name {new Date().getFullYear()}</Text>
+        <Text>&copy; Alec J. Davidson{new Date().getFullYear()}</Text>
         <Flex>
           <Link href="https://www.linkedin.com/" isExternal>
             <IconButton
