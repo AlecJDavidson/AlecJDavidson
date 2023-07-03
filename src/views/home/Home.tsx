@@ -11,7 +11,7 @@ const Home = () => {
         title='Alec Davidson.'
         heroLine='The tower of power, too sweet to be sour!'
         subtitle="I'm a Software Engineer based in Indianapolis. I specialize in creating
-        websites and app solutions in the cloud to transform your business."
+        website and app solutions in the cloud."
       />
       <Spacer marginBottom='25%' />
       <Blog />
