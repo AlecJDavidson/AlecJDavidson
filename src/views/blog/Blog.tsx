@@ -1,4 +1,3 @@
-
 import {
   Box,
   Heading,
@@ -8,11 +7,11 @@ import {
   useColorModeValue,
   Flex,
   useColorMode,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
 const BlogBox = ({ title, description, link }: any) => {
-  const { colorMode } = useColorMode();
-  const hoverBgColor = useColorModeValue('gray.200', 'gray.700');
+  const { colorMode } = useColorMode()
+  const hoverBgColor = useColorModeValue('gray.200', 'gray.700')
 
   return (
     <Link
@@ -41,8 +40,8 @@ const BlogBox = ({ title, description, link }: any) => {
         {description}
       </Text>
     </Link>
-  );
-};
+  )
+}
 
 const Blog = () => {
   // Example data
@@ -65,12 +64,12 @@ const Blog = () => {
         'Etiam eleifend augue sed enim congue semper. Nulla euismod mauris et hendrerit interdum.',
       link: '#',
     },
-  ];
+  ]
 
   return (
     <Box display='flex' justifyContent='center'>
       <Box p={8} width={['100%', '90%', '80%', '73%']}>
-        <Heading as='h1' size='xl' mb={6} textAlign='left' >
+        <Heading as='h1' size='xl' mb={6} textAlign='left'>
           Blog
         </Heading>
         <VStack spacing={4} align='stretch'>
@@ -85,7 +84,7 @@ const Blog = () => {
         </VStack>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

@@ -1,7 +1,17 @@
-import { Box, Flex, IconButton, Link, HStack } from '@chakra-ui/react'
-// import { FaLinkedin, FaGithub, FaCodepen, FaCredly } from 'react-icons/fa';
+import {
+  Box,
+  Flex,
+  Button,
+  Link,
+  HStack,
+  Image,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react'
 
 const Footer = () => {
+  const { colorMode } = useColorMode()
+
   return (
     <Box display='flex' justifyContent='center'>
       <Box
@@ -20,33 +30,91 @@ const Footer = () => {
             <span>Alec J. Davidson &copy; {new Date().getFullYear()}</span>
           </Box>
           <HStack spacing={4} mt={[4, 4, 0]}>
-            <Link href='#' isExternal>
-              <IconButton
+            <Link href='www.linkedin.com/in/alecjdavidson' isExternal>
+              <Button
                 aria-label='LinkedIn'
-                // icon={<FaLinkedin />}
-                colorScheme='gray'
-              />
+                _hover={{
+                  transform: 'scale(1.05)',
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                }}
+                transition='transform 0.2s, box-shadow 0.2s'
+                backgroundColor={
+                  colorMode === 'light' ? 'gray.200' : 'gray.700'
+                }
+              >
+                <Image
+                  boxSize='25px'
+                  objectFit={'contain'}
+                  src='https://cdn-icons-png.flaticon.com/128/3536/3536505.png'
+                  alt='LinkedIn'
+                />
+              </Button>
             </Link>
-            <Link href='#' isExternal>
-              <IconButton
+            <Link href='https://github.com/AlecJDavidson' isExternal>
+              <Button
                 aria-label='GitHub'
-                // icon={<FaGithub />}
-                colorScheme='gray'
-              />
+                _hover={{
+                  transform: 'scale(1.05)',
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                }}
+                transition='transform 0.2s, box-shadow 0.2s'
+                backgroundColor={
+                  colorMode === 'light' ? 'gray.200' : 'gray.700'
+                }
+              >
+                <Image
+                  boxSize='25px'
+                  objectFit={'contain'}
+                  src='https://cdn-icons-png.flaticon.com/128/3291/3291695.png'
+                  alt='GitHub'
+                />
+              </Button>
             </Link>
-            <Link href='#' isExternal>
-              <IconButton
-                aria-label='CodeWars'
-                // icon={<FaCodepen />}
-                colorScheme='gray'
-              />
-            </Link>
-            <Link href='#' isExternal>
-              <IconButton
+
+            <Link href='https://www.credly.com/users/alec-davidson' isExternal>
+              <Button
                 aria-label='Credly'
-                // icon={<FaCredly />}
-                colorScheme='gray'
-              />
+                _hover={{
+                  transform: 'scale(1.05)',
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                }}
+                transition='transform 0.2s, box-shadow 0.2s'
+                backgroundColor={
+                  colorMode === 'light' ? 'gray.200' : 'gray.700'
+                }
+              >
+                <Image
+                  boxSize='25px'
+                  objectFit={'contain'}
+                  src='https://www.svgrepo.com/show/331358/credly.svg'
+                  alt='Credly'
+                />
+              </Button>
+            </Link>
+
+            <Link href='https://www.codewars.com/users/AlecJDavidson' isExternal>
+              <Button
+                aria-label='CodeWars'
+                _hover={{
+                  transform: 'scale(1.05)',
+                  textDecoration: 'none',
+                  bg: useColorModeValue('gray.200', 'gray.700'),
+                }}
+                transition='transform 0.2s, box-shadow 0.2s'
+                backgroundColor={
+                  colorMode === 'light' ? 'gray.200' : 'gray.700'
+                }
+              >
+                <Image
+                  boxSize='25px'
+                  objectFit={'contain'}
+                  src='https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/codewars-512.png'
+                  alt='CodeWars'
+                />
+              </Button>
             </Link>
           </HStack>
         </Flex>

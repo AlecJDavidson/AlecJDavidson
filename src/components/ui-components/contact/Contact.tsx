@@ -1,6 +1,18 @@
-import { Box, Heading, VStack, Input, Textarea, Button } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  VStack,
+  Input,
+  Textarea,
+  Button,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react'
 
 const Contact = () => {
+  const { colorMode } = useColorMode()
+  const hoverBgColor = useColorModeValue('gray.200', 'gray.700')
+
   const handleSubmit = (e: any) => {
     e.preventDefault()
     // Handle form submission logic here
@@ -19,11 +31,21 @@ const Contact = () => {
             <Input type='email' placeholder='Email' size='lg' />
             <Textarea
               placeholder='Note'
-              colorScheme='gray.200'
+              colorScheme='gray'
               size='lg'
               resize='vertical'
             />
-            <Button colorScheme='gray' size='lg' type='submit'>
+            <Button
+              size='lg'
+              type='submit'
+              _hover={{
+                transform: 'scale(1.02)',
+                boxShadow: 'xl',
+                backgroundColor: hoverBgColor,
+              }}
+              transition='transform 0.2s, box-shadow 0.2s'
+              backgroundColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
+            >
               Submit
             </Button>
           </VStack>

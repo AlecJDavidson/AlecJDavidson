@@ -33,9 +33,11 @@ const NavLink = ({ children, to }: { children: ReactNode; to: string }) => (
     py={1}
     rounded={'md'}
     _hover={{
+      transform: 'scale(1.02)',
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
+    transition='transform 0.2s, box-shadow 0.2s'
   >
     {children}
   </Link>
