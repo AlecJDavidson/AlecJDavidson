@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <Box display='flex' justifyContent='center'>
-      <Box p={8} width={['100%', '90%', '80%', '70%']}>
+      <Box p={8} width={['100%', '90%', '80%', '73%']}>
         <Heading as='h1' size='xl' mb={6} textAlign='left'>
           Contact
         </Heading>

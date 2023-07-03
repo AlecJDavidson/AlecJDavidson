@@ -1,3 +1,4 @@
+
 import {
   Box,
   Heading,
@@ -6,9 +7,12 @@ import {
   Link,
   useColorModeValue,
   Flex,
-} from '@chakra-ui/react'
+  useColorMode,
+} from '@chakra-ui/react';
+
 const BlogBox = ({ title, description, link }: any) => {
-  const hoverBgColor = useColorModeValue('gray.200', 'gray.700')
+  const { colorMode } = useColorMode();
+  const hoverBgColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
     <Link
@@ -26,6 +30,7 @@ const BlogBox = ({ title, description, link }: any) => {
       borderRadius='md'
       transition='transform 0.2s, box-shadow 0.2s'
       marginBottom={4}
+      backgroundColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
     >
       <Flex align='center' mb={2}>
         <Heading fontSize='xl' textAlign='left'>
@@ -36,8 +41,8 @@ const BlogBox = ({ title, description, link }: any) => {
         {description}
       </Text>
     </Link>
-  )
-}
+  );
+};
 
 const Blog = () => {
   // Example data
@@ -60,12 +65,12 @@ const Blog = () => {
         'Etiam eleifend augue sed enim congue semper. Nulla euismod mauris et hendrerit interdum.',
       link: '#',
     },
-  ]
+  ];
 
   return (
     <Box display='flex' justifyContent='center'>
       <Box p={8} width={['100%', '90%', '80%', '73%']}>
-        <Heading as='h1' size='xl' mb={6} textAlign='left' marginLeft='1.7%'>
+        <Heading as='h1' size='xl' mb={6} textAlign='left' >
           Blog
         </Heading>
         <VStack spacing={4} align='stretch'>
@@ -80,7 +85,7 @@ const Blog = () => {
         </VStack>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
