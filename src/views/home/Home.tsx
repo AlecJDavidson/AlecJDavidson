@@ -1,9 +1,11 @@
 import 'react'
 import HeroStatement from '../../components/ui-components/hero/Hero'
 import Blog from '../blog/Blog'
+import { Box, Spacer } from '@chakra-ui/react'
+import Contact from '../../components/ui-components/contact/Contact'
 const Home = () => {
   return (
-    <>
+    <Box>
       <HeroStatement
         hello='Hi, my name is'
         title='Alec Davidson.'
@@ -11,8 +13,10 @@ const Home = () => {
         subtitle="I'm a Software Engineer based in Indianapolis. I specialize in creating
         websites and app solutions in the cloud to transform your business."
       />
+      <Spacer marginBottom='25%' />
       <Blog />
-    </>
+      <Contact/>
+    </Box>
   )
 }
 
