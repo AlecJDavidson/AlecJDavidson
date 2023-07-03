@@ -45,7 +45,6 @@ const BlogBox = ({ title, description, link }: any) => {
 }
 
 const Blog = () => {
-  // Example data
   const blogPosts = [
     {
       title: 'Blog Post 1',

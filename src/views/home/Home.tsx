@@ -1,8 +1,8 @@
 import 'react'
 import HeroStatement from '../../components/ui-components/hero/Hero'
-import Blog from '../blog/Blog'
 import { Box, Spacer } from '@chakra-ui/react'
 import Contact from '../../components/ui-components/contact/Contact'
+import Projects from '../projects/Projects'
 const Home = () => {
   return (
     <Box>
@@ -14,7 +14,7 @@ const Home = () => {
         website and app solutions in the cloud."
       />
       <Spacer marginBottom='25%' />
-      <Blog />
+      <Projects/>
       <Contact />
     </Box>
   )

@@ -23,11 +23,10 @@ const Certifications = () => {
       verificationUrl:
         'https://www.credly.com/badges/e4a71b46-ceb4-4bda-b43e-70cb86dcc815',
     },
-    // Add more certifications as needed
   ]
 
   return (
-    <Box display='flex' justifyContent='center'  marginBottom='5%'>
+    <Box display='flex' justifyContent='center'  marginBottom='%'>
       <Box p={8} width={['100%', '90%', '80%', '73%']}>
         <Heading as='h1' size='xl' mb={6} textAlign='left'>
           Certifications

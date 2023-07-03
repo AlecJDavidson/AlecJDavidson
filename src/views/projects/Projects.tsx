@@ -5,6 +5,7 @@ import {
   VStack,
   Link,
   useColorModeValue,
+  Spacer,
   Flex,
   useColorMode,
 } from '@chakra-ui/react'
@@ -17,6 +18,7 @@ const ProjectBox = ({ title, description, link }: any) => {
     <Link
       as='a'
       href={link}
+      isExternal
       textDecoration='none'
       _hover={{
         transform: 'scale(1.02)',
@@ -44,25 +46,34 @@ const ProjectBox = ({ title, description, link }: any) => {
 }
 
 const Projects = () => {
-  // Example data
   const ProjectPosts = [
     {
-      title: 'Project Post 1',
+      title: 'Sony Bravia API',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod leo non felis ultrices scelerisque.',
-      link: '#',
+        "Python library that uses the private rest api as well as the envelope api that processes the remote's iirc input on Sony smart TV's.",
+      link: 'https://github.com/AlecJDavidson/sony_bravia_api',
     },
     {
-      title: 'Project Post 2',
+      title: 'Feed Meow Automatic Cat Feeder',
       description:
-        'Fusce vel pharetra velit, at dignissim tortor. Quisque posuere ligula sed turpis hendrerit malesuada.',
-      link: '#',
+        'Home automation project that feeds my cats using an ESP32 to dispense food on a schedule.',
+      link: 'https://github.com/AlecJDavidson/feed_meow',
     },
     {
-      title: 'Project Post 3',
+      title: 'Raspberry Pi Gameboy',
       description:
-        'Etiam eleifend augue sed enim congue semper. Nulla euismod mauris et hendrerit interdum.',
-      link: '#',
+        "GameBoy Advance revived using a Raspberry Pi Zero W running RetroPi.",
+      link: 'https://www.youtube.com/watch?v=_sHleTKiPtA',
+    },
+
+  ]
+
+  const FutureProjectPosts = [
+    {
+      title: '3D Printed Mouse',
+      description:
+        "3D Printed ultra light mouse housing.",
+      link: '',
     },
   ]
 
@@ -74,6 +85,20 @@ const Projects = () => {
         </Heading>
         <VStack spacing={4} align='stretch'>
           {ProjectPosts.map((post, index) => (
+            <ProjectBox
+              key={index}
+              title={post.title}
+              description={post.description}
+              link={post.link}
+            />
+          ))}
+        </VStack>
+        <Spacer margin='3%' />
+        <Heading as='h1' size='xl' mb={6} textAlign='left'>
+          Upcoming Projects
+        </Heading>
+        <VStack spacing={4} align='stretch'>
+          {FutureProjectPosts.map((post, index) => (
             <ProjectBox
               key={index}
               title={post.title}
