@@ -1,9 +1,9 @@
 import 'react'
-import Contact from '../../components/ui-components/contact/Contact'
+import Certifications from '../../components/ui-components/certifications/Certifications'
 
 const About = () => {
   return <>Hi, I'm Alec!
-    <Contact/>
+    <Certifications/>
     </>
 }
 

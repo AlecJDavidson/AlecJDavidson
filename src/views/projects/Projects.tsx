@@ -36,7 +36,7 @@ const ProjectBox = ({ title, description, link }: any) => {
           {title}
         </Heading>
       </Flex>
-      <Text fontSize='sm' noOfLines={3} isTruncated textAlign='left'>
+      <Text fontSize='sm' textAlign='left'>
         {description}
       </Text>
     </Link>

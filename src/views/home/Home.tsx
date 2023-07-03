@@ -3,7 +3,6 @@ import HeroStatement from '../../components/ui-components/hero/Hero'
 import Blog from '../blog/Blog'
 import { Box, Spacer } from '@chakra-ui/react'
 import Contact from '../../components/ui-components/contact/Contact'
-import Certifications from '../../components/ui-components/certifications/Certifications'
 const Home = () => {
   return (
     <Box>
@@ -15,7 +14,6 @@ const Home = () => {
         website and app solutions in the cloud."
       />
       <Spacer marginBottom='25%' />
-      <Certifications />
       <Blog />
       <Contact />
     </Box>
