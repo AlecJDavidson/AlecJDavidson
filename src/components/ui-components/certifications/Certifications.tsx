@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Link } from '@chakra-ui/react'
+import { Box, Heading, VStack, HStack, Link } from '@chakra-ui/react'
 
 const Certifications = () => {
   const certifications = [
@@ -30,25 +30,27 @@ const Certifications = () => {
     <Box display='flex' justifyContent='center'>
       <Box p={8} width={['100%', '90%', '80%', '73%']}>
         <Heading as='h1' size='xl' mb={6} textAlign='left'>
-          Checkout my certifications!
+          Certifications
         </Heading>
 
-        <HStack spacing={4} align='stretch'>
-          {certifications.map((certification, index) => (
-            <Link href={certification.verificationUrl} isExternal>
-              <Box
-                key={index}
-                _hover={{
-                  transform: 'scale(1.05)',
-                  textDecoration: 'none',
-                }}
-                transition='transform 0.2s, box-shadow 0.2s'
-              >
-                <img src={certification.imageUrl} alt={certification.name} />
-              </Box>
-            </Link>
-          ))}
-        </HStack>
+        <VStack>
+          <HStack spacing={6} align='stretch'>
+            {certifications.map((certification, index) => (
+              <Link href={certification.verificationUrl} isExternal>
+                <Box
+                  key={index}
+                  _hover={{
+                    transform: 'scale(1.2)',
+                    textDecoration: 'none',
+                  }}
+                  transition='transform 0.2s, box-shadow 0.2s'
+                >
+                  <img src={certification.imageUrl} alt={certification.name} />
+                </Box>
+              </Link>
+            ))}
+          </HStack>
+        </VStack>
       </Box>
     </Box>
   )
