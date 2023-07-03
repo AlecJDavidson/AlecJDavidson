@@ -9,7 +9,7 @@ const Home = () => {
       <HeroStatement
         hello='Hi, my name is'
         title='Alec Davidson.'
-        heroLine='The tower of power, too sweet to be sour!'
+        heroLine='The tower of power, too sweet to be sour.'
         subtitle="I'm a Software Engineer based in Indianapolis. I specialize in creating
         website and app solutions in the cloud."
       />

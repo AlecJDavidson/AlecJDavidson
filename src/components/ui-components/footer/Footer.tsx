@@ -30,7 +30,7 @@ const Footer = () => {
             <span>Alec J. Davidson &copy; {new Date().getFullYear()}</span>
           </Box>
           <HStack spacing={4} mt={[4, 4, 0]}>
-            <Link href='www.linkedin.com/in/alecjdavidson' isExternal>
+            <Link href='https://www.linkedin.com/in/alecjdavidson' isExternal>
               <Button
                 aria-label='LinkedIn'
                 _hover={{
