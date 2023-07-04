@@ -32,7 +32,7 @@ const Footer = () => {
           flexWrap='wrap'
         >
           <Box>
-            <span>Alec J. Davidson &copy; {new Date().getFullYear()}</span>
+            <span>&copy; Alec J. Davidson  {new Date().getFullYear()}</span>
           </Box>
           <HStack spacing={4} mt={[4, 4, 0]}>
             <Link href='https://www.linkedin.com/in/alecjdavidson' isExternal>
