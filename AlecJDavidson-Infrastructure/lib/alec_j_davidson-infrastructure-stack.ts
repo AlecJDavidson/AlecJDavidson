@@ -1,5 +1,5 @@
 import { Stack, StackProps, App } from 'aws-cdk-lib';
-import { Bucket, BlockPublicAccess } from 'aws-cdk-lib/aws-s3';
+import { Bucket } from 'aws-cdk-lib/aws-s3';
 import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment';
 import { AnyPrincipal } from 'aws-cdk-lib/aws-iam';
 
@@ -12,7 +12,7 @@ export class AlecJDavidsonInfrastructureStack extends Stack {
       websiteIndexDocument: 'index.html',
       websiteErrorDocument: 'index.html',
       publicReadAccess: true,
-      blockPublicAccess: BlockPublicAccess.BLOCK_ACLS, // Enable blocking public access to prevent editing, deleting, or adding files
+      //blockPublicAccess: BlockPublicAccess.BLOCK_ACLS, // Enable blocking public access to prevent editing, deleting, or adding files
     });
 
     // Grant public read access to the objects in the bucket
