@@ -21,7 +21,7 @@ export class AlecJDavidsonInfrastructureStack extends Stack {
 
     // Deploy the build files to the S3 bucket
     new BucketDeployment(this, 'AlecJDavidsonDeployment', {
-      sources: [Source.asset('dist')],
+      sources: [Source.asset('../../dist')],
       destinationBucket: bucket,
     })
   }
