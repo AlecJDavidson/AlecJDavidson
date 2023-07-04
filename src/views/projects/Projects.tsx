@@ -62,17 +62,15 @@ const Projects = () => {
     {
       title: 'Raspberry Pi Gameboy',
       description:
-        "GameBoy Advance revived using a Raspberry Pi Zero W running RetroPi.",
+        'GameBoy Advance revived using a Raspberry Pi Zero W running RetroPi.',
       link: 'https://www.youtube.com/watch?v=_sHleTKiPtA',
     },
-
   ]
 
   const FutureProjectPosts = [
     {
       title: '3D Printed Mouse',
-      description:
-        "3D Printed ultra light mouse housing.",
+      description: '3D Printed ultra light mouse housing.',
       link: '',
     },
   ]
@@ -80,7 +78,7 @@ const Projects = () => {
   return (
     <Box display='flex' justifyContent='center'>
       <Box p={8} width={['100%', '90%', '80%', '73%']}>
-        <Heading as='h1' size='xl' mb={6} textAlign='left'>
+        <Heading as='h1' size='xl' mb={6} textAlign='center'>
           Projects
         </Heading>
         <VStack spacing={4} align='stretch'>
@@ -93,11 +91,11 @@ const Projects = () => {
             />
           ))}
         </VStack>
-        <Spacer margin='3%' />
-        <Heading as='h1' size='xl' mb={6} textAlign='left'>
+        <Spacer height='3rem' />
+        <Heading as='h1' size='xl' mb={6} textAlign='center'>
           Upcoming Projects
         </Heading>
-        <VStack spacing={4} align='stretch'>
+        <VStack align='stretch'>
           {FutureProjectPosts.map((post, index) => (
             <ProjectBox
               key={index}
@@ -107,6 +105,8 @@ const Projects = () => {
             />
           ))}
         </VStack>
+
+        <Spacer height='5rem' />
       </Box>
     </Box>
   )

@@ -69,7 +69,7 @@ const HeroStatement: React.FC<HeroStatementProps> = ({
           lineHeight='2rem'
           mb={6}
           textAlign='left'
-          maxWidth='35rem'
+          maxWidth='40rem'
         >
           {subtitle}
         </Text>

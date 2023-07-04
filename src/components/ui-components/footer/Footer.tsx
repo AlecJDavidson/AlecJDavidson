@@ -1,3 +1,4 @@
+
 import {
   Box,
   Flex,
@@ -7,17 +8,21 @@ import {
   Image,
   useColorMode,
   useColorModeValue,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 const Footer = () => {
-  const { colorMode } = useColorMode()
+  const { colorMode } = useColorMode();
 
   return (
-    <Box display='flex' justifyContent='center'>
+    <Box
+      as="footer"
+      py={8}
+      marginBottom={'-5rem'}
+      backgroundColor={useColorModeValue('white', 'gray.800')}
+    >
       <Box
-        p={8}
-        width={['100%', '90%', '80%', '73%']}
-        py={4}
+        maxWidth={['100%', '90%', '80%', '73%']}
+        mx="auto"
         px={8}
         textAlign={['center', 'center', 'left']}
       >
@@ -45,7 +50,7 @@ const Footer = () => {
               >
                 <Image
                   boxSize='25px'
-                  objectFit={'contain'}
+                  objectFit='contain'
                   src='https://cdn-icons-png.flaticon.com/128/3536/3536505.png'
                   alt='LinkedIn'
                 />
@@ -66,7 +71,7 @@ const Footer = () => {
               >
                 <Image
                   boxSize='25px'
-                  objectFit={'contain'}
+                  objectFit='contain'
                   src='https://cdn-icons-png.flaticon.com/128/3291/3291695.png'
                   alt='GitHub'
                 />
@@ -88,7 +93,7 @@ const Footer = () => {
               >
                 <Image
                   boxSize='25px'
-                  objectFit={'contain'}
+                  objectFit='contain'
                   src='https://www.svgrepo.com/show/331358/credly.svg'
                   alt='Credly'
                 />
@@ -110,7 +115,7 @@ const Footer = () => {
               >
                 <Image
                   boxSize='25px'
-                  objectFit={'contain'}
+                  objectFit='contain'
                   src='https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/codewars-512.png'
                   alt='CodeWars'
                 />
@@ -120,7 +125,7 @@ const Footer = () => {
         </Flex>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
