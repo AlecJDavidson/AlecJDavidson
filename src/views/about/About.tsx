@@ -1,25 +1,20 @@
 import 'react'
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Heading, Image, HStack } from '@chakra-ui/react'
 
 const About = () => {
   return (
     <Box display='flex' justifyContent='center'>
-      <Box
-        p={8}
-        width={['100%', '90%', '80%', '73%']}
-        py={4}
-        px={8}
-        textAlign={['center', 'center', 'left']}
-      >
-        {/*}<Image
-          src='../../../public/assets/profile.jpg'
-          // 3266 x 4899
+      <Box p={8} width={['100%', '90%', '80%', '73%']}>
+        <Heading as='h1' size='xl' mb={6} textAlign='left'>
+          Hi, I'm Alec!
+        </Heading>
+        <Image
+          src='../../../public/assets/profile.png'
+          //  original size 2728x2424
           alt='Profile Image'
-          // boxSize={['150px', '200px', '250px', '300px']}
-          maxWidth={'326.6'}
-          maxHeight={'489.9'}
-        /> */}
-        <Text>Hi, I'm Alec!</Text>
+          borderRadius={'15'}
+          maxWidth={'25%'}
+        />
       </Box>
     </Box>
   )
