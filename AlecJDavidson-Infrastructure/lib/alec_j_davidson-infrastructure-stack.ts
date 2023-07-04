@@ -11,7 +11,7 @@ export class AlecJDavidsonInfrastructureStack extends Stack {
       websiteIndexDocument: 'index.html',
       websiteErrorDocument: 'index.html',
       publicReadAccess: true,
-      blockPublicAccess: BlockPublicAccess.BLOCK_ACLS, // Disable blockPublicPolicy and blockPublicAcls
+      // blockPublicAccess: BlockPublicAccess.BLOCK_ACLS, // Disable blockPublicPolicy and blockPublicAcls
       removalPolicy: RemovalPolicy.DESTROY, // Optional: Set the bucket removal policy
     })
 
