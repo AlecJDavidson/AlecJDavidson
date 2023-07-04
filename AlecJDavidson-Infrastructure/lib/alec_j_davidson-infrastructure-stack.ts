@@ -12,7 +12,7 @@ export class AlecJDavidsonInfrastructureStack extends Stack {
       websiteIndexDocument: 'index.html',
       websiteErrorDocument: 'index.html',
       publicReadAccess: true,
-      blockPublicAccess: BlockPublicAccess.BLOCK_ALL, // Enable blocking public access to prevent editing, deleting, or adding files
+      blockPublicAccess: BlockPublicAccess.BLOCK_ACLS, // Enable blocking public access to prevent editing, deleting, or adding files
     });
 
     // Grant public read access to the objects in the bucket
