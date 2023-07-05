@@ -1,7 +1,7 @@
-import { Stack, StackProps, App } from 'aws-cdk-lib';
-import { Bucket, BlockPublicAccess } from 'aws-cdk-lib/aws-s3';
-import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment';
-import { RemovalPolicy } from 'aws-cdk-lib';
+import { Stack, StackProps, App } from 'aws-cdk-lib'
+import { Bucket } from 'aws-cdk-lib/aws-s3'
+import { BucketDeployment, Source } from 'aws-cdk-lib/aws-s3-deployment'
+import { RemovalPolicy } from 'aws-cdk-lib'
 
 export class AlecJDavidsonInfrastructureStack extends Stack {
   constructor(scope: App, id: string, props?: StackProps) {
@@ -11,7 +11,6 @@ export class AlecJDavidsonInfrastructureStack extends Stack {
     const bucket = new Bucket(this, 'AlecJDavidsonBucket', {
       websiteIndexDocument: 'index.html',
       publicReadAccess: true,
-      blockPublicAccess: BlockPublicAccess.BLOCK_ALL,
       removalPolicy: RemovalPolicy.DESTROY,
     })
 
@@ -22,5 +21,3 @@ export class AlecJDavidsonInfrastructureStack extends Stack {
     })
   }
 }
-
-
