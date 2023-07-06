@@ -21,7 +21,7 @@ export class AlecJDavidsonWebsiteInfrastructureStack extends Stack {
     bucket.addToResourcePolicy(
       new PolicyStatement({
         actions: ['s3:GetObject'],
-        resources: [`${bucket.bucketArn}/www.alecjdavidson.com/*`],
+        resources: [`${bucket.bucketArn}`],
         principals: [new AnyPrincipal()],
         effect: Effect.ALLOW,
       })
