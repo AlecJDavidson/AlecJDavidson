@@ -57,7 +57,7 @@ const Nav = () => {
               fontSize={'1.25rem'}
               fontWeight={'500'}
             >
-              <Link as={RouterLink} to='/home' _hover={{ textDecoration: 'none' }}>
+              <Link as={RouterLink} to='/' _hover={{ textDecoration: 'none' }}>
                 Alec Davidson
               </Link>
             </Box>
