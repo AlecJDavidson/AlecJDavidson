@@ -9,13 +9,41 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 
+import { useState } from 'react'
+import { Note } from './types/note'
+import postNote from './logic/postNote'
+
 const Contact = () => {
   const { colorMode } = useColorMode()
   const hoverBgColor = useColorModeValue('gray.200', 'gray.700')
+  const [contactData, setContactData] = useState<Note>({
+    name: '',
+    email: '',
+    note: '',
+  })
+
+  const handleChange = (event: any) => {
+    const { name, value } = event.target
+    setContactData((prevState: any) => ({ ...prevState, [name]: value }))
+  }
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    // Handle form submission logic here
+
+    const myNote: Note = {
+      name: contactData.name,
+      email: contactData.email,
+      note: contactData.note,
+    }
+
+    postNote(myNote)
+
+    // Reset form fields
+    setContactData({
+      name: '',
+      email: '',
+      note: '',
+    })
   }
 
   return (
@@ -27,13 +55,33 @@ const Contact = () => {
 
         <form onSubmit={handleSubmit}>
           <VStack spacing={4} align='stretch'>
-            <Input type='text' placeholder='Name' size='lg' />
-            <Input type='email' placeholder='Email' size='lg' />
+            <Input
+              type='text'
+              id='name'
+              name='name'
+              placeholder='Name'
+              value={contactData.name}
+              onChange={handleChange}
+              size='lg'
+            />
+            <Input
+              type='email'
+              id='email'
+              name='email'
+              placeholder='Email'
+              value={contactData.email}
+              onChange={handleChange}
+              size='lg'
+            />
             <Textarea
+              id='note'
+              name='note'
               placeholder='Note'
+              value={contactData.note}
               colorScheme='gray'
               size='lg'
               resize='vertical'
+              onChange={handleChange}
             />
             <Button
               size='lg'
