@@ -10,6 +10,7 @@ export class AlecJDavidsonWebsiteInfrastructureStack extends Stack {
 
     // Create an S3 bucket to host alecjdavidson.com
     const bucket = new Bucket(this, 'AlecJDavidsonBucket', {
+      bucketName: 'alecjdavidson.com',
       websiteIndexDocument: 'index.html',
       publicReadAccess: true,
       blockPublicAccess: BlockPublicAccess.BLOCK_ACLS, // Set bucket access control to private
