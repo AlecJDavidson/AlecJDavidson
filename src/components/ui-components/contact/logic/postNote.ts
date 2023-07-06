@@ -18,7 +18,9 @@ const postNote = async (note: Note) => {
     } else {
       // handle error response
       console.error('Error Sending Note')
+      console.log(Error)
     }
+    return response;
   } catch (error) {
     // handle network or other errors
     console.error('Error:', error)
