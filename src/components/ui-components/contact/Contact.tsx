@@ -7,6 +7,7 @@ import {
   Button,
   useColorMode,
   useColorModeValue,
+  useToast, // Import the useToast hook
 } from '@chakra-ui/react'
 
 import { useState } from 'react'
@@ -21,6 +22,7 @@ const Contact = () => {
     email: '',
     note: '',
   })
+  const toast = useToast() // Initialize the toast
 
   const handleChange = (event: any) => {
     const { name, value } = event.target
@@ -37,6 +39,14 @@ const Contact = () => {
     }
 
     postNote(myNote)
+
+    // Show toast message
+    toast({
+      title: 'Note submitted',
+      status: 'success',
+      duration: 3000, // 3 seconds
+      isClosable: true,
+    })
 
     // Reset form fields
     setContactData({
