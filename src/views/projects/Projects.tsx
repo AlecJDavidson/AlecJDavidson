@@ -48,6 +48,12 @@ const ProjectBox = ({ title, description, link }: any) => {
 const Projects = () => {
   const ProjectPosts = [
     {
+      title: 'OpenStock - Parts Inventory Management System',
+      description:
+        "OpenStock is a parts inventory management system designed to help individuals manage their personal projects efficiently. Whether you're a hobbyist or a DIY enthusiast, OpenStock simplifies the process of organizing and tracking parts for your various projects.",
+      link: 'https://github.com/AlecJDavidson/open-stock',
+    },
+    {
       title: 'Sony Bravia API',
       description:
         "Python library that uses the private rest api as well as the envelope api that processes the remote's iirc input on Sony smart TV's.",
