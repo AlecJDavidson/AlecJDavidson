@@ -8,11 +8,11 @@ import {
   Spacer,
   Flex,
   useColorMode,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 
 const ProjectBox = ({ title, description, link }: any) => {
-  const { colorMode } = useColorMode()
-  const hoverBgColor = useColorModeValue('gray.200', 'gray.700')
+  const { colorMode } = useColorMode();
+  const hoverBgColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
     <Link
@@ -42,8 +42,8 @@ const ProjectBox = ({ title, description, link }: any) => {
         {description}
       </Text>
     </Link>
-  )
-}
+  );
+};
 
 const Projects = () => {
   const ProjectPosts = [
@@ -71,15 +71,26 @@ const Projects = () => {
         'GameBoy Advance revived using a Raspberry Pi Zero W running RetroPi.',
       link: 'https://www.youtube.com/watch?v=_sHleTKiPtA',
     },
-  ]
+    {
+      title: 'Portable GameCube',
+      description: 'A portable GameCube made from original hardware.',
+      link: 'https://youtu.be/YcDSkRn8p7k?si=95uun1YgaKXGty_L',
+    },
+    {
+      title: 'Raspberry Pi K3S Compute Cluster',
+      description:
+        "Here's the link to the STL files to build your own! Mine has been my trusty home lab for a while now. It's my NAS, Plex Server, Web Server, and more!",
+      link: 'https://www.printables.com/model/555215-raspberry-pi-compute-cluster-f90iii-y',
+    },
+  ];
 
   const FutureProjectPosts = [
     {
-      title: '3D Printed Mouse',
-      description: '3D Printed ultra light mouse housing.',
+      title: 'None right now',
+      description: "I don't have anything planned for right now",
       link: '',
     },
-  ]
+  ];
 
   return (
     <Box display='flex' justifyContent='center'>
@@ -115,7 +126,7 @@ const Projects = () => {
         <Spacer height='5rem' />
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
