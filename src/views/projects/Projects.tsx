@@ -86,9 +86,9 @@ const Projects = () => {
 
   const FutureProjectPosts = [
     {
-      title: 'None right now',
-      description: "I don't have anything planned for right now",
-      link: '',
+      title: 'Local Smart Thermostat',
+      description: "Locally controlled smart thermostat using an ESP32 or a Pi Pico W. Fully integrated with Home Assistant",
+      link: 'https://github.com/AlecJDavidson/smart-thermostat/tree/esp32-main',
     },
   ];
 
